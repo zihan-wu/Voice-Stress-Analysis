@@ -1,0 +1,30 @@
+# training parameters
+clip_audio: True # True if you want to chunk the audio, the length of chunking can be set in settings.py
+speaker_only: False # True if you want to only use speaker embedding
+clip_speaker: False # True if you want to compute separate speaker embedding for each chunk
+norm_embed: False # True if embedding is normalized before nn model classifier
+
+train_bs: 128 # mlp or transf classifier training batch size
+n_class: 2 # number of classes to classify
+
+
+# FFT parameters for Log Mel Spectrogram.
+sample_rate: 16000
+n_fft: 1024
+win_length: 400 # Original: 1024
+hop_length: 160
+n_mels: 64 # 96
+f_min: 60
+f_max: 7800
+
+
+# Dimensions of feature representations for BYOL-A/S models.
+feature_d: 2048
+
+
+# CvT parameters:
+depths: [1, 1, 1]
+embed_dims: [64, 256, 512]
+mlp_mults: [4, 4, 4]
+cvt_pool: mean+max
+
