@@ -1,7 +1,9 @@
 # Testing data-driven and DSP-based features on downstream Voice Stress Analysis (VSA) datasets:
 
+This is the code base for the paper: Speaker Embeddings as Individuality Proxy for Voice Stress Detection https://www.isca-speech.org/archive/pdfs/interspeech_2023/wu23i_interspeech.pdf 
+
 This directory includes:
-* Main script (evaluate_clf) that load data, extract embeddings, train classifier and get UAR scores for train and test sets
+* Main script (evaluate_clf) that load data, extract embeddings, train classifier and get UAR (unweighted average recall) scores for train and test sets
 * Utils file with helper functions
 * Settings file including some constants (e.g: datasets paths 'change it based on where your data is located', datasets stats used for normalization in BYOL-S models). Also, it defines all models (data-driven or dsp-based) for testing.
 * nn_trainer file with MLP and Transformer classifier. You can specify 
